@@ -2,7 +2,7 @@
 
 ## Description
 
-Landing page for TerraTech, an agricultural solution for managing plots and sensors and viewing soil information. It presents the product's benefits, Pro and Enterprise plans, the NovaTech team, and a demo request form with a simulated loading state. No form data is sent.
+Landing page for TerraTech, an agricultural solution for managing plots and sensors and viewing soil information. It presents the product's benefits, Pro and Enterprise plans, the NovaTech team, and a demo request form with a simulated loading state. No form data is sent. A soil features section presents moisture, nutrients, and temperature sensors. The terms and conditions modal is provisional: its nine sections contain generic draft terms based on the current informational version.
 
 ## Technologies Used
 
