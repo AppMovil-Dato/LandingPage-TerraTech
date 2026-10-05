@@ -10,11 +10,12 @@
   <meta property="og:description" content="Gestiona parcelas y sensores, consulta indicadores del suelo y revisa el histórico de humedad con TerraTech. Plan Pro por S/ 50 al mes.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PE">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/inter-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="assets/fonts/inter-bold.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/main.js" defer></script>
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="public/fonts/inter-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="public/fonts/inter-bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="public/css/styles.css">
+  <script src="public/js/i18n.js" defer></script>
+  <script src="public/js/main.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="skip">Ir al contenido</a>
@@ -76,8 +77,8 @@
         <p data-i18n="hero.note" class="hero-note">Tu parcela, sus mediciones y su historial en un solo lugar.</p>
       </div>
       <figure class="hero-visual">
-        <img class="field-image" src="assets/images/field.webp" alt="Hileras de cultivos verdes en un campo al atardecer" data-i18n-alt="hero.photoAlt" width="1600" height="1199" fetchpriority="high">
-        <div class="phone-frame hero-phone"><img src="assets/screens/dashboard.png" alt="Captura original en español del dashboard de TerraTech con indicadores de humedad, temperatura y nutrientes" data-i18n-alt="screen.dashboardAlt" width="390" height="844" fetchpriority="high"></div>
+        <img class="field-image" src="public/images/field.webp" alt="Hileras de cultivos verdes en un campo al atardecer" data-i18n-alt="hero.photoAlt" width="1600" height="1199" fetchpriority="high">
+        <div class="phone-frame hero-phone"><img src="public/images/screens/dashboard.png" alt="Captura original en español del dashboard de TerraTech con indicadores de humedad, temperatura y nutrientes" data-i18n-alt="screen.dashboardAlt" width="390" height="844" fetchpriority="high"></div>
         <figcaption data-i18n="hero.photoCaption" class="photo-caption">Datos del suelo para entender mejor tu campo.</figcaption>
       </figure>
     </div>
@@ -120,7 +121,7 @@
 <button type="button" role="tab" id="tab-offline" aria-controls="product-panel" aria-selected="false" tabindex="-1" data-screen="offline" data-i18n="gallery.offline">Sin conexión</button>
           </div>
           <div class="gallery-panel" id="product-panel" role="tabpanel" aria-labelledby="tab-dashboard" tabindex="0">
-            <div class="phone-frame gallery-phone"><img id="gallery-screen" src="assets/screens/dashboard.png" alt="Captura original en español del dashboard de TerraTech con indicadores de humedad, temperatura y nutrientes" data-i18n-alt="screen.dashboardAlt" width="390" height="844" loading="lazy"></div>
+            <div class="phone-frame gallery-phone"><img id="gallery-screen" src="public/images/screens/dashboard.png" alt="Captura original en español del dashboard de TerraTech con indicadores de humedad, temperatura y nutrientes" data-i18n-alt="screen.dashboardAlt" width="390" height="844" loading="lazy"></div>
             <p data-i18n="gallery.dashboardText" class="gallery-description" id="gallery-description">Consulta los indicadores de tu parcela y la fecha de actualización de las mediciones.</p>
           </div>
           <p data-i18n="gallery.original" class="gallery-source">Capturas originales de la app en español.</p>
@@ -161,11 +162,11 @@
           <h2 data-i18n="team.title">Equipo NovaTech</h2>
           <p data-i18n="team.description">Somos estudiantes de Ingeniería de Software que desarrollamos TerraTech para acercar la información del suelo a la experiencia del agricultor.</p>
         </div>
-        <div class="team-grid"><article class="team-member"><img src="assets/team/bryan.jpeg" alt="Bryan Eduardo Barba Estrada" width="168" height="168" loading="lazy"><h3>Bryan Eduardo Barba Estrada</h3><p data-i18n="team.bryan" class="team-role">Requisitos y validación</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
-<article class="team-member"><img src="assets/team/fitzgerald.png" alt="Rúbens Fitzgerald Bendezú Navarro" width="168" height="168" loading="lazy"><h3>Rúbens Fitzgerald Bendezú Navarro</h3><p data-i18n="team.fitzgerald" class="team-role">Arquitectura de software</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
-<article class="team-member"><img src="assets/team/james.jpeg" alt="James Caleb Delgado Perez" width="168" height="168" loading="lazy"><h3>James Caleb Delgado Perez</h3><p data-i18n="team.james" class="team-role">Presentación y documentación</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
-<article class="team-member"><img src="assets/team/angel.png" alt="Angel Jose Pariona Chacca" width="168" height="168" loading="lazy"><h3>Angel Jose Pariona Chacca</h3><p data-i18n="team.angel" class="team-role">Investigación y diseño móvil</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
-<article class="team-member"><img src="assets/team/jorge.jpeg" alt="Jorge Manuel Retuerto Rodriguez" width="168" height="168" loading="lazy"><h3>Jorge Manuel Retuerto Rodriguez</h3><p data-i18n="team.jorge" class="team-role">Desarrollo de backend</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article></div>
+        <div class="team-grid"><article class="team-member"><img src="public/images/team/bryan.jpeg" alt="Bryan Eduardo Barba Estrada" width="168" height="168" loading="lazy"><h3>Bryan Eduardo Barba Estrada</h3><p data-i18n="team.bryan" class="team-role">Requisitos y validación</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
+<article class="team-member"><img src="public/images/team/fitzgerald.png" alt="Rúbens Fitzgerald Bendezú Navarro" width="168" height="168" loading="lazy"><h3>Rúbens Fitzgerald Bendezú Navarro</h3><p data-i18n="team.fitzgerald" class="team-role">Arquitectura de software</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
+<article class="team-member"><img src="public/images/team/james.jpeg" alt="James Caleb Delgado Perez" width="168" height="168" loading="lazy"><h3>James Caleb Delgado Perez</h3><p data-i18n="team.james" class="team-role">Presentación y documentación</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
+<article class="team-member"><img src="public/images/team/angel.png" alt="Angel Jose Pariona Chacca" width="168" height="168" loading="lazy"><h3>Angel Jose Pariona Chacca</h3><p data-i18n="team.angel" class="team-role">Investigación y diseño móvil</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article>
+<article class="team-member"><img src="public/images/team/jorge.jpeg" alt="Jorge Manuel Retuerto Rodriguez" width="168" height="168" loading="lazy"><h3>Jorge Manuel Retuerto Rodriguez</h3><p data-i18n="team.jorge" class="team-role">Desarrollo de backend</p><p data-i18n="team.specialty" class="team-specialty">Ingeniería de Software</p></article></div>
       </div>
     </div>
   </section>
