@@ -59,7 +59,7 @@ document.addEventListener("keydown", event => {
 document.addEventListener("click", event => {
   if (!event.target.closest(".site-header")) setMenu(false);
 });
-window.matchMedia("(min-width: 1151px)").addEventListener("change", event => {
+window.matchMedia("(min-width: 1280px)").addEventListener("change", event => {
   if (event.matches) setMenu(false);
 });
 function selectScreen(name, moveFocus = false) {
@@ -189,4 +189,43 @@ document.addEventListener("terratech:languagechange", () => {
 updateMenuLabel();
 renderFormStatus();
 updateActiveLink();
+
+const termsDialog = document.querySelector("#terms-modal");
+const termsTrigger = document.querySelector("[data-open-terms]");
+let termsOpener = null;
+termsTrigger.addEventListener("click", () => {
+  termsOpener = document.activeElement;
+  termsDialog.showModal();
+  document.body.classList.add("terms-open");
+  termsDialog.scrollTop = 0;
+  termsDialog.focus();
+});
+function closeTerms() { termsDialog.close(); }
+termsDialog.querySelector("[data-close-terms]").addEventListener("click", closeTerms);
+termsDialog.addEventListener("click", event => {
+  const bounds = termsDialog.getBoundingClientRect();
+  if (event.target === termsDialog && (event.clientX < bounds.left || event.clientX > bounds.right ||
+      event.clientY < bounds.top || event.clientY > bounds.bottom)) closeTerms();
+});
+termsDialog.addEventListener("cancel", event => {
+  event.preventDefault();
+  closeTerms();
+});
+termsDialog.addEventListener("close", () => {
+  document.body.classList.remove("terms-open");
+  termsOpener?.focus({ preventScroll: true });
+});
+termsDialog.addEventListener("keydown", event => {
+  if (event.key !== "Tab") return;
+  const controls = [...termsDialog.querySelectorAll('button, a[href], input, select, textarea, [tabindex="0"]')]
+    .filter(element => !element.disabled && element.getClientRects().length);
+  const first = controls[0];
+  const last = controls[controls.length - 1];
+  if (!first) { event.preventDefault(); termsDialog.focus(); return; }
+  if (event.shiftKey && (document.activeElement === first || document.activeElement === termsDialog)) {
+    event.preventDefault(); last.focus();
+  } else if (!event.shiftKey && (document.activeElement === last || document.activeElement === termsDialog)) {
+    event.preventDefault(); first.focus();
+  }
+});
 })();
